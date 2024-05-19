@@ -20,4 +20,4 @@ def text_to_speech(text, lang='id', pitch=0.7, speed=0.8):
 
 if __name__ == "__main__":
     text = input("Masukkan teks yang ingin diubah menjadi suara: ")
-    text_to_speech(text, pitch=5.0, speed=0.3)
+    text_to_speech(text, pitch=50.0, speed=0.3)
