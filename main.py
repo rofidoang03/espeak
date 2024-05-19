@@ -2,8 +2,7 @@ from gtts import gTTS
 import simpleaudio as sa
 import os
 
-text=
-"""
+text="""
 Perkenalan nama Saya Rofi.
 Saya dari Bekasi.
 """
