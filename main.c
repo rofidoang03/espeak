@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 void text_to_speech(const char* text) {
     char command[256];
@@ -12,7 +13,7 @@ int main() {
     printf("Masukkan teks yang ingin diubah menjadi suara: ");
     fgets(text, sizeof(text), stdin);
 
-    // Remove newline character from fgets input
+    // Hapus karakter newline dari input fgets
     size_t len = strlen(text);
     if (len > 0 && text[len-1] == '\n') {
         text[len-1] = '\0';
