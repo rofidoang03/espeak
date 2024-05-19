@@ -2,8 +2,7 @@ from gtts import gTTS
 import simpleaudio as sa
 import os
 
-text="""
-PERINGATAN
+text="""PERINGATAN
 
 Penyalahgunaan atau penggunaan program ini untuk
 aktivitas ilegal dilarang keras. Program ini
@@ -19,8 +18,7 @@ pembuat program.
 
 DENGAN MENGGUNAKAN PROGRAM INI, ANDA MENYATAKAN
 BAHWA ANDA MEMAHAMI DAN MENERIMA SYARAT DAN KETENTUAN
-DIATAS.
-"""
+DIATAS."""
 
 lang="id"
 
