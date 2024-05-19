@@ -2,7 +2,7 @@ from gtts import gTTS
 import simpleaudio as sa
 import os
 
-def text_to_speech(text, lang='id', pitch=0.7, speed=0.8):
+def text_to_speech(text, lang='id', pitch=0.6, speed=0.8):
     # Mengatur pitch dan speed
     tts = gTTS(text=text, lang=lang, slow=False)
     tts.speed = speed
@@ -20,5 +20,5 @@ def text_to_speech(text, lang='id', pitch=0.7, speed=0.8):
 
 if __name__ == "__main__":
     text = input("Masukkan teks yang ingin diubah menjadi suara: ")
-    # Mengatur pitch menjadi lebih rendah (misalnya, 0.6) dan kecepatan menjadi lebih lambat (misalnya, 0.7)
-    text_to_speech(text, pitch=0.6, speed=0.7)
+    # Mengatur pitch menjadi lebih rendah (misalnya, 0.5) untuk suara cowok
+    text_to_speech(text, pitch=0.5)
