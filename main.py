@@ -1,13 +1,18 @@
 from gtts import gTTS
-from playsound import playsound
+import simpleaudio as sa
 import os
 
-text="""
-Perkenalkan nama Saya Rofi.
-Saya lahir di Bekasi."""
+def text_to_speech(text, lang='id'):
+    tts = gTTS(text=text, lang=lang)
+    filename = "output.wav"
+    tts.save("output.mp3")
+    os.system("ffmpeg -i output.mp3 -acodec pcm_s16le -ac 2 -ar 44100 output.wav")
+    wave_obj = sa.WaveObject.from_wave_file(filename)
+    play_obj = wave_obj.play()
+    play_obj.wait_done()
+    os.remove("output.mp3")
+    os.remove("output.wav")  # Hapus file setelah diputar untuk kebersihan
 
-tts=gTTS(text=text, lang="id")
-nama_file="sound.mp3"
-tts.save(nama_file)
-playsound(nama_file)
-os.remove(nama_file)
+if __name__ == "__main__":
+    text = input("Masukkan teks yang ingin diubah menjadi suara: ")
+    text_to_speech(text)
